@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-green
+  labels:
+    app: nginx
+    color: green
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+      color: green
+  template:
+    metadata:
+      labels:
+        app: nginx
+        color: green
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "250m"
+            memory: "256Mi"
