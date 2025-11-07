@@ -13,7 +13,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/rohit-agrawal-2905/EY-Assessment.git'
+                    url: 'https://github.com/rohit-agrawal-2905/EY-Assesment.git'
             }
         }
 
