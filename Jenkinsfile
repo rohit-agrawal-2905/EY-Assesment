@@ -5,7 +5,7 @@ pipeline {
         PROJECT_ID = 'long-stack-477405-g0'
         CLUSTER_NAME = 'demo-gke-cluster'
         CLUSTER_ZONE = 'asia-south1-a'
-        GCP_KEY = credentials('gcp-key')
+        GCP_KEY = credentials('gcp-service-key')
     }
 
     stages {
